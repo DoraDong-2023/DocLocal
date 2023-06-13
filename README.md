@@ -5,10 +5,10 @@ A demo GUI that integrating GitHub documents to local.
 TODO: add figure
 
 # Installation
-<pre> ```python pip install PyQt5 markdown requests<pre> 
+<pre> ```python pip install PyQt5 markdown requests</pre> 
 
 # Usage
-<pre> ```python python GUI.py<pre> 
+<pre> ```python python GUI.py</pre> 
 
 # Update&TODO
 TODO:

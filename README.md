@@ -2,7 +2,8 @@
 A demo GUI that integrating GitHub documents to local.
 
 ## Features
-<img src="export_notion.png" alt="export" width="200"/>
+<img src="Markdownfile.png" alt="export" width="200"/>
+<img src="WebSearchfile.png" alt="export" width="200"/>
 
 ## Installation
 ```shell 
@@ -21,6 +22,9 @@ TODO:
 - A list of commonly used websites and a cheatsheet need to be added.  
 - Display using GitHub icon/other icons as required.  
 - Support for DIY tag.   
+- Some websites are timing out, e.g. https://github.com/facebookresearch/segment-anything.  
+- Support linked png from Github without downloading. Suppoort other file format.  
+
 
 ### 230613 update:
 - Parse for supporting Google/DuckDuckgo/Bing search.   
@@ -29,10 +33,9 @@ TODO:
 - Address Issue: Chinese names cannot be displayed. Use quote to address it.  
 - Address Issue: Unable to update the second link.  
 - Automatically switch to the web search tab after clicking.  
-- Automatically open the Markdown file after successful GitHub download and update the left directory bar.  
-- Cancel the main code directory on the left and only keep the subdirectories.  
-- Some websites are timing out, e.g. https://github.com/facebookresearch/segment-anything.  
-- Display a loading progress bar during the loading process.  
+- Automatically open the Markdown file after successful GitHub download and update the left directory bar.[X]  
+- Cancel the main code directory on the left and only keep the subdirectories.[X]  
+- Display a loading progress bar during the loading process.[X]  
 
 ### 230612 achieved:
 - Direct download in the box.   

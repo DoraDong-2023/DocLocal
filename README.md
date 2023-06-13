@@ -3,10 +3,10 @@ A demo GUI that integrating GitHub documents to local.
 
 ## Features
 
-Enter Github repo link to download all readme files under the repo!
-<img src="./fig/Markdownfile.png" alt="export" width="600"/>
-Integrate Google/Bing/DuckDuckgo websearch into GUI page.
-<img src="./fig/WebSearchfile.png" alt="export" width="600"/>
+Enter Github repo link to download all readme files under the repo!  
+<img src="./fig/Markdownfile.png" alt="export" width="600"/>  
+Integrate Google/Bing/DuckDuckgo websearch into GUI page.  
+<img src="./fig/WebSearchfile.png" alt="export" width="600"/>  
 
 ## Installation
 ```shell 

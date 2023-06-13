@@ -2,7 +2,10 @@
 A demo GUI that integrating GitHub documents to local.
 
 ## Features
+
+Enter Github repo link to download all readme files under the repo!
 <img src="./fig/Markdownfile.png" alt="export" width="600"/>
+Integrate Google/Bing/DuckDuckgo websearch into GUI page.
 <img src="./fig/WebSearchfile.png" alt="export" width="600"/>
 
 ## Installation
@@ -14,6 +17,17 @@ pip install PyQt5 markdown requests
 ```shell
 python GUI.py
 ```
+Selecting searching engine, default Google
+```shell
+python GUI.py --search_engine duckduckgo
+```
+Selecting path, default current path. 
+```shell
+python GUI.py --maindir /Users/user/Doc/GitRepo/DocLocal/
+```
+Notice that it will generate default 'Github' filepath to store downloaded readme files.
+
+
 
 ## Update&TODO
 TODO:

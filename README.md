@@ -53,6 +53,8 @@ TODO:
 - Automatically open the Markdown file after successful GitHub download and update the left directory bar.[X]  
 - Cancel the main code directory on the left and only keep the subdirectories.[X]  
 - Display a loading progress bar during the loading process.[X]  
+- Make the right-hand window size more flexible.  
+- Add self-defined makedir to argparse for easy management.  
 
 ### 230612 achieved:
 - Direct download in the box.   

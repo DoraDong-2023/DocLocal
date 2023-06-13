@@ -17,14 +17,17 @@ pip install PyQt5 markdown requests
 ```shell
 python GUI.py
 ```
+
 Selecting searching engine, default Google. You can choose `google`, `bing`, `duckduckgo` here.  
 ```shell
 python GUI.py --search_engine duckduckgo
 ```
+
 Selecting path, default current path.   
 ```shell
 python GUI.py --maindir /Users/user/Doc/GitRepo/DocLocal/
 ```
+
 Notice that it will generate default 'Github' filepath to store downloaded readme files.  
 
 

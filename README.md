@@ -5,7 +5,7 @@ A demo GUI that integrating GitHub documents to local.
 TODO: add figure
 
 # Installation
-`pip install -r requirements.txt`
+`pip install PyQt5 markdown requests`
 
 # Usage
 `python GUI.py`

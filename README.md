@@ -2,8 +2,8 @@
 A demo GUI that integrating GitHub documents to local.
 
 ## Features
-<img src="Markdownfile.png" alt="export" width="200"/>
-<img src="WebSearchfile.png" alt="export" width="200"/>
+<img src="./fig/Markdownfile.png" alt="export" width="200"/>
+<img src="./fig/WebSearchfile.png" alt="export" width="200"/>
 
 ## Installation
 ```shell 

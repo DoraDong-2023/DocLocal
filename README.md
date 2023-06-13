@@ -12,22 +12,27 @@ TODO: add figure
 
 # Update&TODO
 TODO:
-Automatically switch between web search and Markdown reader.
-Automatically determine input and decide whether to download or perform a Google search, etc.
-https://github.com/facebookresearch/segment-anything does not allow requests and throws an error.
-The loading process cannot be displayed until it finishes, and only the final result is shown.
-Unable to automatically update the path display.
-Need to add equation analysis.
-Add a tag.
-Need to add documentation from other websites or wikis (what document parsing is supported).
-Need to add a list of commonly used websites and cheatsheets.
-Need to display using Github icons/other icons.
+1. Git module is needed for parsing and generating subdirectories.
+
+2. Other website's documentation and wikis need to be added (which document formats are supported for parsing?)
+
+3. A list of commonly used websites and a cheatsheet need to be added.
+
+4. Display using GitHub icon/other icons as required.
+
+5. Support for DIY tag
 
 230613 update:
 Support for .rst and .md files
 Use original filenames instead of readme1234. Add renaming function for duplicate names.
 Address Issue: Chinese names cannot be displayed. Use quote to address it.
 Address Issue: Unable to update the second link.
+Automatically switch to the web search tab after clicking.
+Automatically open the Markdown file after successful GitHub download and update the left directory bar.
+Cancel the main code directory on the left and only keep the subdirectories.
+Some websites are timing out, e.g. https://github.com/facebookresearch/segment-anything.
+Display a loading progress bar during the loading process.
+
 
 230612 achieved:
 Direct download in the box

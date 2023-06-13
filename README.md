@@ -43,8 +43,7 @@ TODO:
 - Display using GitHub icon/other icons as required.  
 - Support for DIY tag.   
 - Some websites are timing out, e.g. https://github.com/facebookresearch/segment-anything.  
-- Support linked png from Github without downloading. Suppoort other file format.  
-
+- Support related png path in url.
 
 ### 230613 update:
 - Parse for supporting Google/DuckDuckgo/Bing search.   
@@ -58,6 +57,8 @@ TODO:
 - Display a loading progress bar during the loading process.[X]  
 - Make the right-hand window size more flexible.  
 - Add self-defined makedir to argparse for easy management.  
+- Support linked png from Github without downloading. Suppoort other file format.  
+
 
 ### 230612 achieved:
 - Direct download in the box.   

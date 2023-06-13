@@ -2,6 +2,7 @@
 """
 Created on June 13th, 2023
 Author: Zhengyuan Dong
+Email: zydong122@gmail.com
 """
 
 import requests, re, os

@@ -2,6 +2,7 @@
 """
 Created on June 12th, 2023
 Author: Zhengyuan Dong
+Email: zydong122@gmail.com
 """
 
 import os, sys, markdown

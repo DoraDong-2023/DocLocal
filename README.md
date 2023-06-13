@@ -30,6 +30,9 @@ python GUI.py --maindir /Users/user/Doc/GitRepo/DocLocal/
 
 Notice that it will generate default 'Github' filepath to store downloaded readme files.  
 
+## Acknowledgement
+If you think it is a convenient tool, give a star, thanks!
+
 
 
 ## Update&TODO

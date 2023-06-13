@@ -1,6 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on June 12th, 2023
+Author: Zhengyuan Dong
+"""
+
 import os, sys, markdown
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTreeView, QFileSystemModel, QTextBrowser, QWidget, QVBoxLayout, QHBoxLayout, QSplitter, QFrame, QFrame, QLineEdit, QPushButton, QTreeWidgetItem, QTabWidget
-from PyQt5.QtCore import Qt, QUrl, QModelIndex
+from PyQt5.QtCore import Qt, QUrl, QModelIndex, QIdentityProxyModel
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtGui import QDesktopServices, QStandardItemModel, QStandardItem
 from getlink import *
@@ -8,7 +14,10 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Search using Google or download file.')
 parser.add_argument('--search_engine', default='google', help='search using Google')
+parser.add_argument('--maindir', default=0, help='search using Google')
 args = parser.parse_args()
+if args.maindir==0:
+    args.maindir = os.path.abspath(os.getcwd())
 
 class MarkdownViewer(QMainWindow):
     def __init__(self,folder_path):
@@ -42,6 +51,7 @@ class MarkdownViewer(QMainWindow):
         self.tree_view.setIndentation(20)
         self.tree_view.setExpandsOnDoubleClick(True)
         self.tree_view.clicked.connect(self.on_clicked)
+        #self.tree_view.setRootIsDecorated(False)
 
 
         # right
@@ -98,9 +108,7 @@ class MarkdownViewer(QMainWindow):
                     file_item.setFlags(root_item.flags() & ~Qt.ItemIsEditable)
                     root_item.appendRow(file_item)
         self.tree_view.setModel(model)
-        #index = model.index(0, 0, QModelIndex())
-        #self.tree_view.setRowHidden(index.row(), QModelIndex(), False)
-        
+
     def on_search_Github(self,):
         self.text_browser.setText('Getting Files from Github...')
         search_text = self.search_edit.text()
@@ -145,6 +153,6 @@ class MarkdownViewer(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    viewer = MarkdownViewer(os.path.abspath(os.getcwd()))
+    viewer = MarkdownViewer(args.maindir)
     viewer.show()
     sys.exit(app.exec_())

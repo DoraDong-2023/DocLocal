@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on June 13th, 2023
+Author: Zhengyuan Dong
+"""
+
 import requests, re, os
 from urllib.parse import urlparse, unquote
 
@@ -52,15 +58,35 @@ def get_readme_from_github(url):
         raw_link = link[0].replace("blob", "raw")
         readme_url = "https://github.com" + raw_link
         readme_response = requests.get(readme_url)
-        
+
+        txt = readme_response.text
+        txt = substitute(readme_url, txt)
+
         with open(readme_list[i], "a") as f:
-            f.write(readme_response.text)
+            f.write(txt)
         f.close()
     if len(readme_links)>0:
         reback=True
     else:
         reback=False
     return reback
+def substitute(repo_url, content):
+    # remove last readme
+    repo_url = '/'.join(repo_url.split('/')[:-1])
+    pattern = r'<img src="(.+?)"'
+    matches = re.findall(pattern, content)
+
+    for match in matches:
+        parsed_url = urlparse(match)
+        if not parsed_url.scheme and not parsed_url.netloc:
+            img_path = parsed_url.path.replace("./", "")
+            img_url = f"{repo_url}/{img_path}"
+            print(img_url)
+        else:
+            # if use url link to show img
+            img_url = match
+        content = content.replace(match, img_url)
+    return content
 def save_readme_from_url(url):
     if parse_url(url)=='github':
         reback = get_readme_from_github(url)
@@ -71,7 +97,7 @@ def save_readme_from_url(url):
     else:
         return 'Unsupport type of link, please enter Github Link now!'
 if __name__=='__main__':
-    url = "https://github.com/openai/openai-cookbook"
+    url = "https://github.com/DoraDong-2023/DocLocal"
     save_readme_from_url(url)
     
     
